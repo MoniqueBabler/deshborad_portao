@@ -158,8 +158,7 @@ function criarGraficoSemanal(dados) {
 function preencherTabela(registros) {
   const tbody = document.getElementById("tabelaRegistros");
 
-  // Mostra os 20 registros mais recentes, mantendo o mesmo formato do wireframe.
-  registros
+
     .slice(-20)
     .reverse()
     .forEach(registro => {
