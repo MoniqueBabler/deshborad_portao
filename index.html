@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME - Dashboard do Portão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+    <main class="dashboard">
+        <header class="header">
+        <div>
+            <span class="eyebrow">ACME</span>
+            <h1>Dashboard de entradas e saídas da empresa</h1>
+            <p>Histórico de aberturas do portão — maio de 2026</p>
+        </div>
+        <div class="total-card">
+            <span>Total no mês</span>
+            <strong id="totalMes">—</strong>
+            <small>aberturas</small>
+        </div>
+        </header>
+
+        <section class="chart-card">
+        <div class="section-title">
+            <div>
+            <h2>Diariamente</h2>
+            <p>Número de vezes em que o portão foi aberto em cada dia</p>
+            </div>
+        </div>
+        <div class="chart-wrapper daily-chart">
+            <canvas id="graficoDiario"></canvas>
+        </div>
+        </section>
+
+        <section class="chart-card">
+        <div class="section-title">
+            <div>
+            <h2>Semanalmente</h2>
+            <p>Número de vezes em que o portão foi aberto por semana</p>
+            </div>
+        </div>
+        <div class="chart-wrapper weekly-chart">
+            <canvas id="graficoSemanal"></canvas>
+        </div>
+        </section>
+
+        <section class="table-card">
+        <div class="section-title">
+            <div>
+            <h2>Últimos registros</h2>
+            <p>Registros mais recentes achados no arquivo de dados</p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+            <thead>
+                <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Semana</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaRegistros"></tbody>
+            </table>
+        </div>
+        </section>
+
+        <footer>
+        Dados carregados de <strong>dados.csv</strong> • Dashboard desenvolvido em HTML, CSS e JavaScript.
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
